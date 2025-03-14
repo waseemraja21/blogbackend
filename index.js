@@ -21,7 +21,7 @@ app.use(
   cors({
     credentials: true,
     methods: ["POST", "GET", "PATCH", "DELETE"],
-    origin: "http://localhost:3000", // frontend origin
+    origin: "https://blogclient-iota.vercel.app", // frontend origin
   })
 );
 
