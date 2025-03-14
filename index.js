@@ -29,7 +29,7 @@ app.use(
 const uri = process.env.MONGO_URI;
 
 mongoose
-  .connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.rth5xhw.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority&appName=Cluster0`)
   .then(() => console.log("MongoDB connected..."))
   .catch((err) => console.log("Error connecting to MongoDB:", err));
 
